@@ -256,4 +256,116 @@ p {
 
 .pr-5 {
   padding-right: 2.5rem;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../../images/desktop/image-header.jpg") no-repeat center/cover;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.navbar-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-desktop ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.navbar-desktop ul a {
+  text-decoration: none;
+  margin-left: 24px;
+  font-family: "barlow", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+.navbar-desktop ul .btn {
+  padding: 8px 24px;
+  font-family: "fraunces", serif;
+  font-weight: 700;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(212, 27%, 19%);
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+.navbar-desktop ul .btn:hover {
+  color: white;
+  background-color: #72d0ff;
+}
+@media screen and (max-width: 640px) {
+  .navbar-desktop {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar-mobile .burguer {
+  cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  .navbar-mobile {
+    display: flex;
+  }
+}
+
+.menu-mobile {
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 24px 0;
+  background-color: hsl(0, 0%, 100%);
+}
+.menu-mobile ul {
+  list-style-type: none;
+}
+.menu-mobile li {
+  margin: 24px 0;
+}
+.menu-mobile a {
+  position: relative;
+  text-decoration: none;
+  padding: 0 24px;
+  font-family: "barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: hsl(212, 27%, 19%);
+}
+.menu-mobile a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border: 1px solid hsl(212, 27%, 19%);
+  transition: 0.3s ease;
+}
+.menu-mobile a:hover::after {
+  width: 100%;
+}
+.menu-mobile::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -10px;
+  right: 6px;
+  background-color: hsl(0, 0%, 100%);
+  transform: rotate(45deg);
+}
+
+.active {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
