@@ -16,6 +16,21 @@
     margin: 0 auto;
     padding: 0 24px;
 }
+.align-center{
+    text-align: center;
+}
+.flex{
+    display: flex;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
 .navbar-desktop{
     display: flex;
     align-items: center;
@@ -122,3 +137,4 @@
 .active{
     display: flex;
 }
+

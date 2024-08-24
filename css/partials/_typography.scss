@@ -5,12 +5,14 @@
 }
 
 h1{
-    font-size: 3.5rem;
+    font-family: 'fraunces', serif;
+    font-size: 4rem;
     font-weight: 700;
-    
+    color: $White;
+    text-align: center;
     
     @include responsivi(640px){
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 }
 h2{

@@ -1,0 +1,15 @@
+@keyframes arrow{
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(24px);
+    }
+}
+.arrow-down{
+    animation-name: arrow;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
