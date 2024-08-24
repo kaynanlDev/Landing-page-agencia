@@ -9,19 +9,22 @@ h1{
     font-size: 4rem;
     font-weight: 700;
     color: $White;
-    text-align: center;
+   
     
     @include responsivi(640px){
-        font-size: 3.5rem;
+        font-size: 5rem;
+        width: 70%;
+        margin: 0 auto;
     }
 }
 h2{
-    color: $yellow;
-    font-size: 2rem;
-    font-weight: 600;
-    
+    font-family: 'fraunces', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: $Very-dark-desaturated-blue;
+
     @include responsivi(640px){
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 }
 h3{
@@ -45,10 +48,11 @@ h4{
 }
 
 p{
+    font-family: 'barlow', sans-serif;
     font-size: 1rem;
     font-weight: 500;
-    
-    
+    color: $Dark-grayish-blue;
+    line-height: 20px;
     @include responsivi(640px){
         font-size: 1rem;
     }

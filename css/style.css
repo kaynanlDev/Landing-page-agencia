@@ -14,22 +14,24 @@ h1 {
   font-size: 4rem;
   font-weight: 700;
   color: hsl(0, 0%, 100%);
-  text-align: center;
 }
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 5rem;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
 h2 {
-  color: hsl(51, 100%, 49%);
-  font-size: 2rem;
-  font-weight: 600;
+  font-family: "fraunces", serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: hsl(212, 27%, 19%);
 }
 @media screen and (max-width: 640px) {
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -55,8 +57,11 @@ h4 {
 }
 
 p {
+  font-family: "barlow", sans-serif;
   font-size: 1rem;
   font-weight: 500;
+  color: hsl(232, 10%, 55%);
+  line-height: 20px;
 }
 @media screen and (max-width: 640px) {
   p {
@@ -266,6 +271,11 @@ p {
   height: 100vh;
   background: url("../../images/desktop/image-header.jpg") no-repeat center/cover;
 }
+@media screen and (max-width: 640px) {
+  .hero {
+    background: url("../../images/mobile/image-header.jpg") no-repeat center/cover;
+  }
+}
 
 .container {
   max-width: 1100px;
@@ -385,6 +395,101 @@ p {
 
 .active {
   display: flex;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 550px);
+  grid-template-areas: "grid-1 grid-2" "grid-3 grid-4" "grid-5 grid-6";
+}
+@media screen and (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 400px);
+    grid-template-areas: "grid-2" "grid-1" "grid-3" "grid-4" "grid-5" "grid-6";
+  }
+}
+
+.grid-1 {
+  grid-area: grid-1;
+}
+.grid-1 .grid-text {
+  width: 70%;
+}
+.grid-1 .grid-text a {
+  font-family: "fraunces", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
+  color: hsl(212, 27%, 19%);
+  border-bottom: hsl(51, 100%, 49%) 4px solid;
+}
+
+.grid-2 {
+  grid-area: grid-2;
+  background: url("../../images/desktop/image-transform.jpg") no-repeat center/cover;
+}
+
+.grid-3 {
+  grid-area: grid-3;
+  background: url("../../images/desktop/image-stand-out.jpg") no-repeat center/cover;
+}
+
+.grid-4 {
+  grid-area: grid-4;
+}
+.grid-4 .grid-text {
+  width: 70%;
+}
+.grid-4 .grid-text a {
+  font-family: "fraunces", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
+  color: hsl(212, 27%, 19%);
+  border-bottom: hsl(7, 99%, 70%) 4px solid;
+}
+
+.grid-5 {
+  grid-area: grid-5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: url("../../images/desktop/image-graphic-design.jpg") no-repeat center/cover;
+}
+.grid-5 .grid-text {
+  width: 70%;
+}
+.grid-5 .grid-text h2 {
+  text-align: center;
+  color: hsl(167, 40%, 24%);
+}
+.grid-5 .grid-text p {
+  text-align: center;
+  color: hsl(167, 40%, 24%);
+}
+
+.grid-6 {
+  grid-area: grid-6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: url("../../images/desktop/image-photography.jpg") no-repeat center/cover;
+}
+.grid-6 .grid-text {
+  width: 70%;
+}
+.grid-6 .grid-text h2 {
+  text-align: center;
+  color: hsl(198, 62%, 26%);
+}
+.grid-6 .grid-text p {
+  text-align: center;
+  color: hsl(198, 62%, 26%);
 }
 
 @keyframes arrow {

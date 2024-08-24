@@ -9,6 +9,9 @@
     height: 100vh;
     background: url('../../images/desktop/image-header.jpg') no-repeat center / cover;
     
+    @include responsivi(640px){
+        background: url('../../images/mobile/image-header.jpg') no-repeat center / cover;
+    }
 }
 
 .container{
@@ -137,4 +140,109 @@
 .active{
     display: flex;
 }
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 550px);
+    grid-template-areas: 
+    "grid-1 grid-2"
+    "grid-3 grid-4"
+    "grid-5 grid-6";
 
+    @include responsivi(640px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 400px);
+        grid-template-areas: 
+        "grid-2" 
+        "grid-1"
+        "grid-3"
+        "grid-4"
+        "grid-5"
+        "grid-6";
+    }
+}
+.grid-1{
+    grid-area: grid-1;
+    
+    .grid-text{
+        width: 70%;
+
+        a{
+            font-family: 'fraunces', serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 800;
+            color: $Very-dark-desaturated-blue;
+            border-bottom:$yellow 4px solid;
+        }
+    }
+    
+}
+.grid-2{
+    grid-area: grid-2;
+    background: url('../../images/desktop/image-transform.jpg')no-repeat center / cover;
+}
+.grid-3{
+    grid-area: grid-3;
+    background: url('../../images/desktop/image-stand-out.jpg')no-repeat center / cover;
+}
+.grid-4{
+    grid-area: grid-4;
+
+    .grid-text{
+        width: 70%;
+
+        a{
+            font-family: 'fraunces', serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 800;
+            color: $Very-dark-desaturated-blue;
+            border-bottom:$Soft-red 4px solid;
+        }
+    }
+}
+.grid-5{
+    grid-area: grid-5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: url('../../images/desktop/image-graphic-design.jpg')no-repeat center / cover;
+
+    .grid-text{
+        width: 70%;
+
+        h2{
+            text-align: center;
+            color: $Dark-desaturated-cyan;
+        }
+        p{
+            text-align: center;
+            color: $Dark-desaturated-cyan;
+        }
+    }
+}
+.grid-6{
+    grid-area: grid-6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: url('../../images/desktop/image-photography.jpg')no-repeat center / cover;
+
+    .grid-text{
+        width: 70%;
+
+        h2{
+            
+            text-align: center;
+            color: $Dark-blue;
+        }
+        p{
+            text-align: center;
+            color: $Dark-blue;
+        }
+    }
+}
