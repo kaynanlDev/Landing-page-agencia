@@ -492,6 +492,102 @@ p {
   color: hsl(198, 62%, 26%);
 }
 
+.testimonials {
+  width: 100%;
+}
+.testimonials h2 {
+  font-size: 1.5rem;
+  color: hsl(232, 10%, 55%);
+  font-family: "fraunces", serif;
+  text-transform: uppercase;
+}
+.testimonials .testimonials-items {
+  margin-top: 92px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.testimonials .testimonials-items .testimonials-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials .testimonials-items .testimonials-item .photo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+.testimonials .testimonials-items .testimonials-item .photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.testimonials .testimonials-items .testimonials-item .testimonial-text p {
+  text-align: center;
+  color: hsl(212, 27%, 19%);
+}
+.testimonials .testimonials-items .testimonials-item .testimonial-text h5 {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "fraunces", serif;
+  font-weight: 800;
+  color: hsl(212, 27%, 19%);
+}
+.testimonials .testimonials-items .testimonials-item .testimonial-text .career {
+  color: hsl(232, 10%, 55%);
+}
+@media screen and (max-width: 640px) {
+  .testimonials .testimonials-items {
+    flex-direction: column;
+    gap: 64px;
+  }
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 350px;
+}
+.images-grid .grid-milk {
+  background: url("../../images/desktop/image-gallery-milkbottles.jpg") no-repeat center/cover;
+}
+@media screen and (max-width: 640px) {
+  .images-grid .grid-milk {
+    background: url("../../images/mobile/image-gallery-milkbottles.jpg") no-repeat center/cover;
+  }
+}
+.images-grid .grid-orange {
+  background: url("../../images/desktop/image-gallery-orange.jpg") no-repeat center/cover;
+}
+@media screen and (max-width: 640px) {
+  .images-grid .grid-orange {
+    background: url("../../images/mobile/image-gallery-orange.jpg") no-repeat center/cover;
+  }
+}
+.images-grid .grid-cone {
+  background: url("../../images/desktop/image-gallery-cone.jpg") no-repeat center/cover;
+}
+@media screen and (max-width: 640px) {
+  .images-grid .grid-cone {
+    background: url("../../images/mobile/image-gallery-cone.jpg") no-repeat center/cover;
+  }
+}
+.images-grid .grid-sugar {
+  background: url("../../images/desktop/image-gallery-sugarcubes.jpg") no-repeat center/cover;
+}
+@media screen and (max-width: 640px) {
+  .images-grid .grid-sugar {
+    background: url("../../images/mobile/image-gallery-sugar-cubes.jpg") no-repeat center/cover;
+  }
+}
+@media screen and (max-width: 640px) {
+  .images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+  }
+}
+
 @keyframes arrow {
   0% {
     transform: translateY(-10px);
